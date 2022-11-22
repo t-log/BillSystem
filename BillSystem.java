@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,6 +8,12 @@ class Customer{
     static int coffeePrice = 15;
     static int snackPrice = 10;
     int totalPrice = 0;
+    int teaQuantity = 0;
+    int coffeeQuantity = 0;
+    int snacksQuantity = 0;
+    String name ="";
+    long phoneNo = 0;
+
 
     Customer(){
         System.out.println("***ORDER MENU***\n" +
@@ -23,17 +30,17 @@ class Customer{
             switch (optionTwo){
                 case 1:
                     System.out.println("Enter quantity for Tea:");
-                    int teaQuantity = sd.nextInt();
+                    teaQuantity = sd.nextInt();
                     totalPrice += teaPrice*teaQuantity;
                     break;
                 case 2:
                     System.out.println("Enter quantity for Coffee:");
-                    int coffeeQuantity = sd.nextInt();
+                    coffeeQuantity = sd.nextInt();
                     totalPrice += coffeePrice*coffeeQuantity;
                     break;
                 case 3:
                     System.out.println("Enter quantity for Snacks:");
-                    int snacksQuantity = sd.nextInt();
+                    snacksQuantity = sd.nextInt();
                     totalPrice += snackPrice*snacksQuantity;
                     break;
                 case 0:
@@ -68,7 +75,19 @@ public class BillSystem {
                     Customer c = new Customer();
                     customArray.add(c);
                 case 2:
-
+                    System.out.println("Enter Name:");
+                    customArray.get(0).name = sc.next();
+                    System.out.println("Enter Phone no:");
+                    customArray.get(0).phoneNo = sc.nextLong();
+                    System.out.println("***BILL***");
+                    System.out.println("Your Order:");
+                    System.out.println("Name:"+customArray.get(0).name);
+                    System.out.println("Phone no:"+customArray.get(0).phoneNo);
+                    System.out.println("Tea *"+customArray.get(0).teaQuantity+"="+customArray.get(0).teaQuantity*Customer.teaPrice);
+                    System.out.println("Coffee *"+customArray.get(0).coffeeQuantity+"="+customArray.get(0).coffeeQuantity*Customer.coffeePrice);
+                    System.out.println("Snacks *"+customArray.get(0).snacksQuantity+"="+customArray.get(0).snacksQuantity*Customer.snackPrice);
+                    System.out.println("Total price:"+customArray.get(0).totalPrice);
+                    break;
                 case 3:
                     for (Customer obj:customArray) {
                         System.out.println(obj.totalPrice);
