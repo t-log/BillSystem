@@ -59,6 +59,7 @@ public class BillSystem {
     public static void main(String[] args) {
         boolean flag = true;
         ArrayList<Customer> customArray = new ArrayList<Customer>();
+        int counter = -1;
         while (flag) {
             System.out.println("***MENU***\n" +
                     "Enter Option:\n" +
@@ -73,27 +74,33 @@ public class BillSystem {
             switch (option) {
                 case 1:
                     Customer c = new Customer();
+                    counter++;
                     customArray.add(c);
+                    break;
                 case 2:
                     System.out.println("Enter Name:");
-                    customArray.get(0).name = sc.next();
+                    customArray.get(counter).name = sc.next();
                     System.out.println("Enter Phone no:");
-                    customArray.get(0).phoneNo = sc.nextLong();
-                    System.out.println("***BILL***");
-                    System.out.println("Your Order:");
-                    System.out.println("Name:"+customArray.get(0).name);
-                    System.out.println("Phone no:"+customArray.get(0).phoneNo);
-                    System.out.println("Tea *"+customArray.get(0).teaQuantity+"="+customArray.get(0).teaQuantity*Customer.teaPrice);
-                    System.out.println("Coffee *"+customArray.get(0).coffeeQuantity+"="+customArray.get(0).coffeeQuantity*Customer.coffeePrice);
-                    System.out.println("Snacks *"+customArray.get(0).snacksQuantity+"="+customArray.get(0).snacksQuantity*Customer.snackPrice);
-                    System.out.println("Total price:"+customArray.get(0).totalPrice);
+                    customArray.get(counter).phoneNo = sc.nextLong();
+                    System.out.println("************BILL************");
+                    System.out.println("------------Your Order------------");
+                    System.out.println("Name:"+customArray.get(counter).name);
+                    System.out.println("Phone no:"+customArray.get(counter).phoneNo);
+                    System.out.println("Tea *"+customArray.get(counter).teaQuantity+"="+customArray.get(0).teaQuantity*Customer.teaPrice);
+                    System.out.println("Coffee *"+customArray.get(counter).coffeeQuantity+"="+customArray.get(0).coffeeQuantity*Customer.coffeePrice);
+                    System.out.println("Snacks *"+customArray.get(counter).snacksQuantity+"="+customArray.get(0).snacksQuantity*Customer.snackPrice);
+                    System.out.println("Total price:"+customArray.get(counter).totalPrice);
                     break;
                 case 3:
-                    for (Customer obj:customArray) {
-                        System.out.println(obj.totalPrice);
+                    for (:) {
+
                     }
+                        System.out.println(customArray.get(0).name);
+                        System.out.println(customArray.get(0).totalPrice);
                 case 4:
                 case 0:
+                    flag = false;
+                    break;
             }
         }
     }
