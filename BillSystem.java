@@ -85,9 +85,9 @@ public class BillSystem {
                     System.out.println("------------Your Order------------");
                     System.out.println("Name:"+customArray.get(counter).name);
                     System.out.println("Phone no:"+customArray.get(counter).phoneNo);
-                    System.out.println("Tea *"+customArray.get(counter).teaQuantity+"="+customArray.get(0).teaQuantity*Customer.teaPrice);
-                    System.out.println("Coffee *"+customArray.get(counter).coffeeQuantity+"="+customArray.get(0).coffeeQuantity*Customer.coffeePrice);
-                    System.out.println("Snacks *"+customArray.get(counter).snacksQuantity+"="+customArray.get(0).snacksQuantity*Customer.snackPrice);
+                    System.out.println("Tea    * "+customArray.get(counter).teaQuantity+"= "+customArray.get(0).teaQuantity*Customer.teaPrice);
+                    System.out.println("Coffee * "+customArray.get(counter).coffeeQuantity+"= "+customArray.get(0).coffeeQuantity*Customer.coffeePrice);
+                    System.out.println("Snacks * "+customArray.get(counter).snacksQuantity+"= "+customArray.get(0).snacksQuantity*Customer.snackPrice);
                     System.out.println("Total price:"+customArray.get(counter).totalPrice);
                     System.out.println("----------------------------------");
                     break;
@@ -97,7 +97,6 @@ public class BillSystem {
                         System.out.println(obj.totalPrice);
 
                     }
-                case 4:
                 case 0:
                     flag = false;
                     break;
