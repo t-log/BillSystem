@@ -91,11 +91,11 @@ public class BillSystem {
                     System.out.println("Total price:"+customArray.get(counter).totalPrice);
                     break;
                 case 3:
-                    for (:) {
+                    for(Customer obj:customArray) {
+                        System.out.println(obj.name);
+                        System.out.println(customArray.get(0).totalPrice);
 
                     }
-                        System.out.println(customArray.get(0).name);
-                        System.out.println(customArray.get(0).totalPrice);
                 case 4:
                 case 0:
                     flag = false;
