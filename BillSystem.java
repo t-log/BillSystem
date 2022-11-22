@@ -89,11 +89,12 @@ public class BillSystem {
                     System.out.println("Coffee *"+customArray.get(counter).coffeeQuantity+"="+customArray.get(0).coffeeQuantity*Customer.coffeePrice);
                     System.out.println("Snacks *"+customArray.get(counter).snacksQuantity+"="+customArray.get(0).snacksQuantity*Customer.snackPrice);
                     System.out.println("Total price:"+customArray.get(counter).totalPrice);
+                    System.out.println("----------------------------------");
                     break;
                 case 3:
                     for(Customer obj:customArray) {
                         System.out.println(obj.name);
-                        System.out.println(customArray.get(0).totalPrice);
+                        System.out.println(obj.totalPrice);
 
                     }
                 case 4:
